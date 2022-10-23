@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-font-family: "Caveat", cursive;
+  --header-bg-color: rgb(48, 95, 196);
+  --title-font-size: 32px;
+  --text-font-size: 24px;
+}
+
+/* map */
+#map {
+  padding-left: 20vw;
+  box-sizing: border-box;
+}
+#map_inner {
+  width: 70vw;
+  height: 107px;
+}
+
+#tt_sm_map {
+  width: 275px;
+  height: 150px;
+  background-color: rgba(228, 226, 226, 0.815);
+  color: rgba(233, 233, 233, 0);
+}
+/* header */
+header {
+  position: static;
+  width: 100vw;
+  background-color: var(--header-bg-color);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15%;
+  padding-right: 15%;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header-img {
+  width: 60px;
+  height: 50px;
+  padding: 10px;
+  background-image: url(./imgs/cloud.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.title {
+  font-family: var(--main-font-family);
+  font-size: var(--title-font-size);
+  font-weight: 400;
+  align-self: center;
+  width: 50%;
+  margin-left: 10px;
+  font-weight: 700;
+  width: auto;
+}
+
+.web__logo-wrapper {
+  display: flex;
+}
+
+/* main */
+main {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/*weather info*/
+.city__weather,
+.city__name {
+  font-size: var(--title-font-size);
+  font-family: var(--main-font-family);
+  color: black;
+}
+.city__weather {
+  width: auto;
+}
+
+.temp,
+.feels,
+.weather__status {
+  font-size: var(--text-font-size);
+  font-family: var(--main-font-family);
+  color: black;
+  width: 135px;
+}
+
+.weather__container {
+  display: flex;
+  width: 30%;
+}
+.weather__status-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
+}
+.cityWeather__status-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
+}
+.weather__temp,
+.weather__feel {
+  display: inline;
+  width: auto;
+}
+.city__weather-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+  left: 10%;
+  width: auto;
+}
+.state__weather-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.weather__status {
+  width: 120px;
+}
+
+.state__weather-container {
+  flex-direction: row;
+}
+
+.weather__icon {
+  position: relative;
+  top: -20px;
+}
+
+.weather__state-icon {
+  position: relative;
+  top: -60px;
+  right: -50px;
+}
+img {
+  height: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --main-font-family: "Caveat", cursive;
+    --header-bg-color: rgb(48, 95, 196);
+    --title-font-size: 20px;
+    --text-font-size: 16px;
+  }
+
+  #tt_sm_map {
+    width: 180px;
+    height: 100px;
+  }
+  header {
+    height: 80px;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .header-img {
+    width: 60px;
+    height: 50px;
+    padding: 10px;
+  }
+
+  .weather__container {
+    gap: 40px;
+    width: auto;
+  }
+
+  .city__weather-wrapper {
+    gap: 25px;
+    width: auto;
+  }
+  .state__weather-wrapper {
+    gap: 25px;
+  }
+  .weather__status {
+    width: 120px;
+  }
+  .weather__icon {
+    top: -10px;
+  }
+  .weather__state-icon {
+    top: -40px;
+    left: 20px;
+  }
+  .temp,
+  .feels,
+  .weather__status {
+    width: 90px;
+  }
+  .cityWeather__status-wrapper {
+    justify-content: start;
+  }
+  .weather__container {
+    gap: 10px;
+  }
+  img {
+    height: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --title-font-size: 14px;
+    --text-font-size: 10px;
+  }
+  #tt_sm_map {
+    width: 120px;
+    height: 60px;
+  }
+  header {
+    height: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .header-img {
+    width: 20px;
+    height: 10px;
+  }
+
+  .weather__container {
+    gap: 40px;
+    width: auto;
+  }
+
+  .city__weather-wrapper {
+    gap: 25px;
+    width: auto;
+  }
+
+  .weather__icon {
+    left: -80px;
+    top: -10px;
+  }
+  .weather__state-icon {
+    top: -25px;
+    left: -50px;
+  }
+
+  img {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  :root {
+    --title-font-size: 10px;
+    --text-font-size: 8px;
+  }
+  #tt_sm_map {
+    width: 90px;
+    height: 50px;
+  }
+  header {
+    height: 40px;
+  }
+  .header-img {
+    width: 20px;
+    height: 10px;
+  }
+
+  .weather__container {
+    gap: 40px;
+    width: auto;
+  }
+
+  .city__weather-wrapper {
+    gap: 10px;
+    width: auto;
+  }
+
+  .weather__icon {
+    left: -80px;
+    top: -5px;
+  }
+  .weather__state-icon {
+    top: -18px;
+    left: -70px;
+  }
+
+  img {
+    height: 30px;
+  }
+}
